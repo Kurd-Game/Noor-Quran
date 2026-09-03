@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ئەپڵیکەیشنی قورئانی پیرۆز</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-quran"></i>
+            <span>قورئانی پیرۆز</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#quran-section">سوڕەتەکان</a></li>
+            <li><a href="#reciters-section">خوێنەران</a></li>
+            <li><a href="#hadith-section">فەرموودەکان</a></li>
+            <li><a href="#prayer-section">کاتەکانی بانگ</a></li>
+            <li><a href="#auth-section" class="btn-auth">چوونەژوورەوە</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header / Banner -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>شاکاری قورئانی پیرۆز و فەرموودەکان</h1>
+            <p>گوێبیستی دەنگی باشترین خوێنەرانی جیهان ببە و کاتەکانی بانگ بە وردی بزانە</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- 1, 2, 3, 4, 5: Auth Section (Login & Signup) -->
+        <section id="auth-section" class="auth-container">
+            <div class="auth-tabs">
+                <button class="tab-btn active" onclick="switchTab('login')">چوونەژوورەوە (Login)</button>
+                <button class="tab-btn" onclick="switchTab('signup')">دروستکردنی هەژمار (Sign Up)</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form active">
+                <h2>چوونەژوورەوە</h2>
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="ئیمەیڵ (Email)" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="وشەی نهێنی (Password)" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" placeholder="ژمارەی تلفۆن (Phone Number)" required>
+                </div>
+                
+                <!-- Security Verification -->
+                <div class="captcha-box">
+                    <input type="checkbox" id="recaptcha-login">
+                    <label for="recaptcha-login">من ڕۆبۆت نینم (I'm not a robot)</label>
+                </div>
+
+                <button type="submit" class="btn-submit">چوونەژوورەوە</button>
+
+                <!-- Social Login -->
+                <div class="social-login">
+                    <p>یان لەڕێگەی تۆڕە کۆمەڵایەتییەکانەوە بچۆ ژوورەوە:</p>
+                    <div class="social-btns">
+                        <button type="button" class="btn-social google"><i class="fa-brands fa-google"></i> Google</button>
+                        <button type="button" class="btn-social facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Sign Up Form -->
+            <form id="signup-form" class="auth-form">
+                <h2>دروستکردنی هەژماری نوێ</h2>
+                <div class="input-group">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="ناوی بەکارهێنەر (Username)" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="ئیمەیڵ (Email)" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" placeholder="ژمارەی تلفۆن (Phone Number)" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="وشەی نهێنی (Password)" required>
+                </div>
+
+                <div class="verification-notice">
+                    <p><i class="fa-solid fa-shield-halved"></i> پشکنین بۆ ئیمەیڵ و ژمارەی تلفۆن دەکرێت دوای تۆماربوون.</p>
+                </div>
+
+                <div class="captcha-box">
+                    <input type="checkbox" id="recaptcha-signup">
+                    <label for="recaptcha-signup">من ڕۆبۆت نینم (I'm not a robot)</label>
+                </div>
+
+                <button type="submit" class="btn-submit">تۆماربوون</button>
+            </form>
+        </section>
+
+        <!-- Quran Surahs Section -->
+        <section id="quran-section" class="main-section">
+            <h2 class="section-title"><i class="fa-solid fa-book-quran"></i> سوڕەتەکانی قورئانی پیرۆز</h2>
+            <div class="grid-container" id="surah-list">
+                <!-- Javascript or Static items will render here -->
+                <div class="card"><span>1</span> الفاتحة</div>
+                <div class="card"><span>2</span> البقرة</div>
+                <div class="card"><span>3</span> آل عمران</div>
+                <div class="card"><span>4</span> النساء</div>
+                <div class="card"><span>5</span> المائدة</div>
+                <div class="card"><span>6</span> الأنعام</div>
+                <div class="card"><span>7</span> الأعراف</div>
+                <div class="card"><span>8</span> الأنفال</div>
+                <div class="card"><span>9</span> التوبة</div>
+                <div class="card"><span>10</span> يونس</div>
+                <!-- ناوەکانی تر بە هەمان شێوە درێژەیان دەبێت -->
+            </div>
+        </section>
+
+        <!-- Reciters Section -->
+        <section id="reciters-section" class="main-section">
+            <h2 class="section-title"><i class="fa-solid fa-microphone"></i> خوێنەرانی قورئانی پیرۆز</h2>
+            <div class="grid-container">
+                <div class="card reciter-card"><i class="fa-solid fa-user-large"></i> عبدالباسط عبدالصمد</div>
+                <div class="card reciter-card"><i class="fa-solid fa-user-large"></i> محمد صدیق المنشاوی</div>
+                <div class="card reciter-card"><i class="fa-solid fa-user-large"></i> محمود خلیل الحصری</div>
+                <div class="card reciter-card"><i class="fa-solid fa-user-large"></i> ماهر المعيقلي</div>
+                <div class="card reciter-card"><i class="fa-solid fa-user-large"></i> عبدالرحمن السدیس</div>
+                <div class="card reciter-card"><i class="fa-solid fa-user-large"></i> مشاری العفاسی</div>
+                <div class="card reciter-card"><i class="fa-solid fa-user-large"></i> ڕعد الكردي</div>
+                <div class="card reciter-card"><i class="fa-solid fa-user-large"></i> کاروانێکی کوردی</div>
+                <!-- ناوەکانی تر بە هەمان شێوە درێژەیان دەبێت -->
+            </div>
+        </section>
+
+        <!-- Hadith Section -->
+        <section id="hadith-section" class="main-section">
+            <h2 class="section-title"><i class="fa-solid fa-quote-right"></i> فەرموودە هەڵبژێردراوەکان</h2>
+            <div class="hadith-container">
+                <div class="hadith-card">
+                    <p class="arabic">إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ</p>
+                    <p class="kurdish">بەڕاستی کردارەکان بە نیەتەکانن.</p>
+                    <span class="source">📚 صحیح البخاري، ١</span>
+                </div>
+                <div class="hadith-card">
+                    <p class="arabic">مَنْ لَا يَرْحَمْ لَا يُرْحَمْ</p>
+                    <p class="kurdish">ئەوەی بەزەیی بە خەڵک نەکات، بەزەیی پێ ناکرێت.</p>
+                    <span class="source">📚 صحیح البخاري، 7376</span>
+                </div>
+                <div class="hadith-card">
+                    <p class="arabic">الطُّهُورُ شَطْرُ الإِيمَانِ</p>
+                    <p class="kurdish">پاکیزەیی نیوەی ئیمانە.</p>
+                    <span class="source">📚 صحیح مسلم، 223</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prayer Times Section -->
+        <section id="prayer-section" class="main-section">
+            <h2 class="section-title"><i class="fa-solid fa-clock"></i> کاتەکانی بانگ لە هەرێمی کوردستان</h2>
+            <div class="prayer-box">
+                <div class="countdown-timer">
+                    <h3>کاتی مابوو بۆ بانگی داهاتوو:</h3>
+                    <div id="timer">02:45:12</div>
+                </div>
+                <div class="prayer-times-grid">
+                    <div class="time-card"><span>بەیانی</span> <strong>04:30 AM</strong></div>
+                    <div class="time-card"><span>کەوتبوو (کانی)</span> <strong>06:00 AM</strong></div>
+                    <div class="time-card active"><span>نیوەڕۆ</span> <strong>12:15 PM</strong></div>
+                    <div class="time-card"><span>عەسر</span> <strong>03:45 PM</strong></div>
+                    <div class="time-card"><span>ئێوارە</span> <strong>06:30 PM</strong></div>
+                    <div class="time-card"><span>عیشا</span> <strong>08:00 PM</strong></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.auth-form').forEach(form => form.classList.remove('active'));
+            
+            if(tab === 'login') {
+                event.target.classList.add('active');
+                document.getElementById('login-form').classList.add('active');
+            } else {
+                event.target.classList.add('active');
+                document.getElementById('signup-form').classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
